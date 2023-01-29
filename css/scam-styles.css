@@ -1,0 +1,124 @@
+/***** General Styling *****/
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 17px;
+}
+
+body {
+  background: #023e8a  url('../imgs/wrapper-background.jpg') no-repeat top left fixed;
+  color: #fff;
+  margin: 0;
+}
+
+h1 {
+  font-size: 2.3rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+h1::before, h2::before {
+  content: '<';
+}
+
+h1::after, h2::after {
+  content: '>';
+}
+
+/***** Header and Nav Styling *****/
+
+header{
+  background-color: rgba(31, 78, 96, .9);
+}
+
+header div {
+  position: relative;
+}
+
+header div p {
+  left: 25px;
+  position: absolute;
+  top: 35px;
+}
+
+/* Nav Styling */
+
+nav {
+  background-color: rgba(14, 95, 129, .8);
+  box-shadow: 0px 12px 15px 15px rgba(0,0,0,0.8);
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: rgba(7, 41, 53, 0.9);
+  cursor: pointer;
+}
+
+nav ul li {
+  border: 1px solid rgba(255, 255, 255, .1);
+}
+
+/***** Main and Secondary Content Styling *****/
+
+/* Wrapper */
+#wrapper {
+  background: rgba(101, 108, 109, 0.3);
+  background-size: cover;
+  margin: auto;
+  max-width: 1200px;
+  padding: 0 1rem 1rem;
+}
+
+/* Main */
+.sl-background {
+  background-color: rgba(50, 73, 77, .5);
+  backdrop-filter: blur(5px);
+  border-radius: 8px;
+  box-shadow: 5px 5px 5px #000;
+  margin: 0 1rem 1rem;
+  padding: .5rem;
+}
+
+main:first-child {
+  border-radius: 0 0 8px 8px;
+}
+
+/***** Footer Styling *****/
+
+footer {
+  background-color: rgba(14, 95, 129, .8);
+}
+
+footer small {
+  padding-right: 2rem;
+}
+
+footer small:nth-child(2) {
+  border-left: 2px dashed rgba(255, 255, 255, .2);
+  padding-left: 2rem;
+}
+
+footer a {
+  color: #fff;
+  font-weight: bold;
+}
+
+/***** Fluid Text  *****/
+
+/* Min Width 320 px */
+@media screen and (min-width: 350px) {
+  html {
+    font-size: calc(17px + (22 - 17) * ((100vw - 325px) / (2400 - 350)));
+  }
+}
+
+@media screen and (min-width: 2400px) {
+  html {
+    font-size: 22px;
+  }
+}
